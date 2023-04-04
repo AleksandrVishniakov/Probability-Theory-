@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Игральная кость</title>
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="css/dice/style_cube.css">
+  <link rel="stylesheet" href="css/chart_style.css">
+</head>
+
+<body>
+  <h1>Игральная кость</h1>
+  <div class="flex-row">
+    <div>
+      <canvas id="canvas"></canvas>
+      <div id="result"></div>
+      <div class="buttons">
+        <button onclick="rollDice()">Бросить</button>
+        <form name="rollsN">
+          <input type="number" value="1" min="1" max="1000" name="n" class="number">
+        </form>
+      </div>
+      <table rules="cols">
+        <tr>
+          <td>Количество бросков</td>
+          <td id="rolls">0</td>
+        </tr>
+        <tr>
+          <td>Выпавшая кость</td>
+          <td>Кол-во выпадений</td>
+          <td>Вероятность выпадения</td>
+          <td>Среднестатистическое значение</td>
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td id="n1">0</td>
+          <td id="v1">0%</td>
+          <td>16,67%</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td id="n2">0</td>
+          <td id="v2">0%</td>
+          <td>16,67%</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td id="n3">0</td>
+          <td id="v3">0%</td>
+          <td>16,67%</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td id="n4">0</td>
+          <td id="v4">0%</td>
+          <td>16,67%</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td id="n5">0</td>
+          <td id="v5">0%</td>
+          <td>16,67%</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td id="n6">0</td>
+          <td id="v6">0%</td>
+          <td>16,67%</td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div id="histogram"></div>
+  </div>
+  <script src="libraries/chart_script.js"></script>
+  <script src="libraries/three.min.js"></script>
+  <script src="script/dice/cube_animate.js"></script>
+</body>
+
+</html>
